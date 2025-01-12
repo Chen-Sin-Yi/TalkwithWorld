@@ -1,25 +1,129 @@
-* {
+/* 全網頁設定 */
+*{
     box-sizing: border-box;
     position: relative;
+    text-decoration: none;
+}
+
+a {
+    color: black;
 }
 
 body, html{
     width: 100%;
-
 }
+
+ul {
+    list-style: none;
+    padding: 0 0;
+}
+
+i {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.hero{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 120px;
+}
+
+h1, h2, h3{
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* 格線系統 */
+.container{
+    max-width: 1920px;
+    /* border: 1px solid black; */
+    margin: 0px auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* display: block; */
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .container{
+        max-width: 375px;
+    }
+}
+
+
+.row{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 30px;
+}
+
+/* 以12格為基底的格線系統 */
+/* 斷點設計 */
+/* destop -(768px)- pad -(375px)- phone */
+.col-lg-6,.col-lg-4,.col-lg-3,.col-lg-2,
+.col-md-12,.col-md-4,.col-md-6,
+.col-sm-12,.col-sm-6{
+    /* border: 1px solid red; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-lg-2{
+    width: 16.66666%; 
+}
+
+.col-lg-3{
+    width: 25%;
+}
+
+.col-lg-4{
+    width: 33.333333%;
+}
+
+.col-lg-6{
+    width: 50%;
+}
+
+
+@media screen and (max-width: 768px){
+    .col-md-12{
+        width: 100%;
+    }
+    .col-md-6{
+        width: 50%;
+    }
+    .col-md-4{
+        width: 33.333333%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .col-sm-12{
+        width: 100%;
+    }
+    .col-sm-6{
+        width: 50%;
+    }
+}
+
 /* 頁首樣式Start */
 
 .header{
     width: 100%;
-    /* width: 100px; */
-    /* height: 100px; */
-    /* width: 100%; */
-    margin: 0 auto;
-    padding: 0 auto;
     display: block;
-    border: 1px solid #000;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
+    /* border: 1px solid #000; */
 }
 
  nav {
@@ -33,14 +137,14 @@ body, html{
     color: white;
 }
     
-nav .logo {
-        /* border: 1px solid black; */
-    width: 214px;
-    height: 96px;
+.logo {
+    /* border: 1px solid black; */
+    width: 215px;
+    height: 130px;
     background-image: url(../Image/W.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     align-items: center;
 }
@@ -58,7 +162,7 @@ nav ul li {
 nav ul li a {
     color: #000;
     text-decoration: none;
-    font-size: 38px;
+    font-size: 34px;
     font-family: "微軟正黑體";
     font-weight: bold;
 }
@@ -90,6 +194,7 @@ nav ul li a:hover {
     background-color: white;
     color: #00a0e9;
 }
+
 .register{
     background-color: #fff;
     color: #8a8a8a;
@@ -101,14 +206,14 @@ nav ul li a:hover {
 }
 
 .content {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     position: relative;
     z-index: 1;
     text-align: center;
     padding: 100px 20px;
     width: 100%;
-    height: 516px;
-    background-image: url(../Image/海闊天空2.PNG);
+    height: 100%;
+    background-image: url(https://i.postimg.cc/6366s0YF/2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -119,17 +224,17 @@ nav ul li a:hover {
 }
 
 .content h1 {
-    font-size: 48px;
-    font-weight: bold;
+    /* font-size: 48px;
+    font-weight: bold; */
     color: red;
     margin-bottom: 20px;
 }
 
 .content h2 {
-    font-size: 48px;
+    /* font-size: 48px;
+    font-weight: bold; */
     margin-bottom: 20px;
     color: #4636fb;
-    font-weight: bold;
 }
 
 .content span {
@@ -162,3 +267,483 @@ nav ul li a:hover {
 }
 /* 頁首樣式End */
 
+/* 打造自己的教室樣式Start */
+.buildclassroom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* border: 1px solid red; */
+}
+
+.video{
+    width: 370px;
+    height: 420px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: 1px solid #000;
+}
+
+.video .image{
+    width: 335px;
+    height: 335px;
+    background-image: url(https://i.postimg.cc/rF8bfDhY/image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.video .more{
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 28px;
+        cursor: pointer;
+        margin: 10px 100px;
+        color: #000;
+        background-color: #22d3ee;
+}
+
+.video .more:hover {
+    background-color: #0073e6;
+    color: #fff;
+}
+
+.buildclassroom h2 {
+    width: 100%;
+    /* font-size: 48px;
+    font-weight: bold; */
+    margin-bottom: 20px;
+    color: #f59b00;
+    text-align: left;
+}
+
+.advantages {
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.advantage {
+    /* border: 1px solid green; */
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 34px;
+    text-align: center;
+}
+
+.advantage img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15vh;
+    height: 15vh;
+}
+
+/* .advantage i{
+    margin-top: 45px;
+} */
+
+.advantage span{
+    /* border: 1px solid yellow; */
+    /* padding: 40px 0; */
+    font-family: "微軟正黑體";
+    font-size: 28px;
+    /* text-align: left; */
+}
+/* 打造自己的教室樣式End */
+
+/* 課程影片輪播區樣式Start */
+.carousel {
+    /* border: #f59b00 2px solid; */
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    background: #d1dbe7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    border: #000 1px solid;
+    background: #fff;
+    width: 330px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.card-content {
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 20px;
+    /* padding: 5px 5px; */
+    margin-top: 5px;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.card button {
+    margin: 5px 0;
+    background-color: #00a0e9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #0073e6;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* 課程影片輪播區End */
+
+
+
+/* 如何建造教室樣式Star */
+.howtobuild {
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+.howtobuild h2 {
+    /* font-size: 48px;
+    font-weight: bold; */
+    color: #33a4d8;
+    margin-left: 15%;
+}
+
+.classroom-container {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.classroom-image img {
+    width: 515px;
+    height: auto;
+}
+
+.classroom-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.requirements, .steps {
+    /* border: 1px solid red; */
+    padding: 0 15px;
+}
+
+.requirements h3, .steps h3 {
+    margin-bottom: 10px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: "微軟正黑體";
+}
+
+.requirements p, .steps ul li {
+    margin: 5px 0;
+    font-size: 34px;
+    line-height: 1.5;
+}
+
+.requirements p span, .steps ul li span {
+    margin-right: 5px;
+    font-size: 28px;
+    font-family: "微軟正黑體";
+}
+
+/* 如何建造教室樣式End */
+
+/* 平台介紹樣式Start */
+
+.container h2 {
+    /* font-size: 48px;
+    font-weight: bold; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intropage{
+ /* border: 1px solid red; */
+ width: 100%;
+ height: 500px;
+ background-image: url(https://i.postimg.cc/hP4qYyyn/image.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ background-position-y: 30%;
+ margin-bottom: 50px;
+}
+
+.img-meeting{
+    height: 100%;
+    background-image: url(https://i.postimg.cc/XvSHRXj5/image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.text {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 34px;
+    font-family: "微軟正黑體";
+}
+
+.highlight {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #5dc937;
+    margin-top: 20px;
+}
+
+.text .par{
+    text-align: center;
+    color: #E3aa18;
+    font-family: "微軟正黑體";
+}
+
+.img-partner{
+    height: 100%;
+    background-image: url(https://i.postimg.cc/52M81zzf/image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 平台介紹樣式End */
+
+/* 夥伴心得影片輪播區樣式Start */
+.carousel-talk {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-talk .card img {
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.carousel-talk .card .play {
+    width: 90%;
+    margin-top: 5px;
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
+    /* padding: 5px 5px; */
+}
+/* 夥伴心得影片輪播區樣式End */
+
+/* 課程選擇樣式Start */
+.class-choose {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+  }
+
+.header-img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 500px;
+    background-image: url(https://i.postimg.cc/nLhTmW1d/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 30%;
+    margin-bottom: 50px;
+
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #fff;
+    margin-bottom: 100px;
+    /* border: 1px solid #000; */
+  }
+  
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-group label {
+    margin-bottom: 5px;
+    font-size: 34px;
+    color: #E3aa18;
+  }
+  
+  .filter-group select {
+    padding: 5px;
+    font-size: 34px;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .filters button {
+    height: 90%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+    .filters button:hover {
+    background-color: #0056b3;
+  } 
+  
+  .classes {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 50px;
+      margin-top: 300px;
+      /* border: 1px solid purple; */
+  }
+  
+  .choose {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 30%;
+    height: 30%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .choose img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+
+  .choose p{
+      font-size: 34px;
+      font-family: "微軟正黑體";
+      /* border: 1px solid goldenrod; */
+  }
+  
+  /* 課程選擇樣式End */
+
+  /* 常見問答樣式Start */
+.faq {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .faq-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item h3 {
+    margin-bottom: 10px;
+    color: #5dc937; 
+  }
+  
+  .faq-question {
+    font-family: "微軟正黑體";
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
