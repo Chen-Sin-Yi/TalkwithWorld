@@ -141,7 +141,7 @@ h1, h2, h3{
     /* border: 1px solid black; */
     width: 215px;
     height: 130px;
-    background-image: url(../Image/W.png);
+    background-image: url(https://i.postimg.cc/hvP8NyCJ/W.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -206,7 +206,7 @@ nav ul li a:hover {
 }
 
 .content {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
     z-index: 1;
     text-align: center;
